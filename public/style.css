@@ -1,0 +1,124 @@
+body{
+    background-image: url("img/ScreenshotStarfield2.png");
+}
+
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.logo{
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+.menu-item{
+    text-decoration: none;
+    font-size: 20px;
+    margin: 15px;
+}
+
+.menu-item:hover{
+    color: #ff0000;
+}
+
+.titre{
+    width: 1120px;
+    height: 150px;
+    background-color: rgb(63, 62, 62);
+    margin: 0 auto;
+    margin-top: 60px;
+    text-align: center;
+    line-height: 150px;
+    box-shadow: inset 0px -15px 5px -5px rgb(0 0 0 / 50%);
+}
+
+h1{
+    color: white;
+    font-family: 'Concert One', cursive;
+    font-size: 50px;
+    margin: 0;
+    text-align: center;
+}
+
+h2{
+    color: white;
+}
+
+.rubrique{
+    position: relative;
+    margin: 0px auto;
+    padding: 60px;
+    width: 1000px;
+    min-height: 550px;
+    background-color: rgb(63, 62, 62);
+    z-index: 2;
+    align-items: center;
+}
+
+a{
+    color: white;
+}
+
+.btn-group{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.btn{
+    background-color: rgb(126, 126, 126);
+    text-decoration: none;
+    padding: 15px;
+    font-size: 25px;
+    margin: 10px 0;
+    text-align: center;
+	border: none;
+}
+
+.btn:hover{
+    background-color: rgb(92, 92, 92);
+}
+
+.editor-name, .category-name, .developer-name{
+	display: block;
+	width: 100px;
+	text-decoration: none;
+	padding: 10px;
+	background-color: rgb(126, 126, 126);
+	margin-top: 15px;
+	text-align: center;
+}
+
+.editor-name:hover, .category-name:hover, .developer-name:hover{
+	background-color: rgb(92, 92, 92);
+}
+
+.conn{
+    background-color: #d80000;
+}
+
+.conn:hover{
+    background-color: #740000;
+}
+
+.miniature{
+    width: 300px;
+    margin: 15px;
+}
+
+.new{
+	display: block;
+	width: 100px;
+	text-decoration: none;
+	padding: 10px;
+	background-color: #d80000;
+	margin-top: 15px;
+	text-align: center;
+}
+
+.new:hover{
+    background-color: #740000;
+}

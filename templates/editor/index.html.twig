@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block titre %}<h1>Éditeurs</h1>{% endblock %}
+
+{% block body %}
+
+        {% for editor in editors %}
+                <a class="editor-name" href="{{ path('gamesByEditor', {'editor': editor.id}) }}">{{ editor.name }}</a>
+                <a class="editor-edit" href="{{ path('editor_edit', {'id': editor.id}) }}">Modifier</a>
+                <br>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+
+    <a class="new" href="{{ path('editor_new') }}">Ajouter</a>
+{% endblock %}

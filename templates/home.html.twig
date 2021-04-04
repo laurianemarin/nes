@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block titre %}
+    <h1>Bienvenue</h1>
+{% endblock %}
+
+{% block body %}
+    {# <h1>{{ titre }}</h1> #}
+    <div class="btn-group">
+        {% if not is_granted('ROLE_USER') %}
+            <a class="btn" href="{{ path('app_login') }}">Se connecter</a>
+        {% endif %}
+        {% if is_granted('ROLE_USER') %}
+            <a class="btn" href="{{ path('game_index') }}">Tous les jeux</a>
+            <a class="btn" href="{{ path('category_index') }}">Catégories</a>
+            <a class="btn" href="{{ path('developer_index') }}">Développeurs</a>
+            <a class="btn" href="{{ path('editor_index') }}">Éditeurs</a>
+            <a class="btn conn" href="{{ path('app_logout') }}">Se déconnecter</a>
+        {% endif %}
+    </div>
+{% endblock %}

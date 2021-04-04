@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block titre %}<h1>Tri par éditeur</h1>{% endblock %}
+
+{% block body %}
+
+        {% for game in list %}
+            <a href="{{ path('game_show', {'id': game.id}) }}"><img class="miniature" src="{{ game.photo }}" alt="Image du jeu"></a>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+
+    <a class="new" href="{{ path('game_new') }}">Ajouter</a>
+{% endblock %}

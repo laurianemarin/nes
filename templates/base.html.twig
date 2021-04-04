@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}The NES Project!{% endblock %}</title>
+        {# Run `composer require symfony/webpack-encore-bundle`
+        and uncomment the following Encore helpers to start using Symfony UX #}
+        <link href="https://nes.marin.etu.mmi-unistra.fr/public/style.css" rel="stylesheet">
+        {% block stylesheets %}
+            {#{{ encore_entry_link_tags('app') }}#}
+        {% endblock %}
+
+        {% block javascripts %}
+            {#{{ encore_entry_script_tags('app') }}#}
+        {% endblock %}
+    </head>
+    <body>
+        <header>
+            <img  class="logo" src="https://nes.marin.etu.mmi-unistra.fr/public/img/logo_nes.png" alt="logo">
+            <div class="menu">
+            {% if is_granted('ROLE_USER') %}
+                <a class="menu-item" href="{{ path('game_index') }}">Tous les jeux</a>
+                <a class="menu-item" href="{{ path('category_index') }}">Catégories</a>
+                <a class="menu-item" href="{{ path('developer_index') }}">Développeurs</a>
+                <a class="menu-item" href="{{ path('editor_index') }}">Éditeurs</a>
+                <a class="menu-item" href="{{ path('app_logout') }}">Se déconnecter</a>
+            {% endif %}
+            </div>
+        </header>
+        <div class="titre">
+        {% block titre %}{% endblock %}
+        </div>
+        <div class="rubrique">
+        {% block body %}{% endblock %}
+        </div>
+    </body>
+</html>

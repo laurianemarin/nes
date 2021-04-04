@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block titre %}<h1>{{ game.name }} ({{ game.date }})</h1>{% endblock %}
+
+{% block body %}
+    <img src="{{ game.photo }}" alt="Image du jeu">
+	<p style="color: white;">{{ game.description }}</p>
+
+    <a class="category-name" href="{{ path('game_index') }}">Tous les jeux</a>
+
+    <a class="category-name" href="{{ path('game_edit', {'id': game.id}) }}">Modifier</a>
+
+    {{ include('game/_delete_form.html.twig') }}
+{% endblock %}

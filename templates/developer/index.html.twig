@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block titre %}<h1>Développeurs</h1>{% endblock %}
+
+{% block body %}
+        {% for developer in developers %}
+                <a class="developer-name" href="{{ path('gamesByDeveloper', {'developer': developer.id}) }}">{{ developer.name }}</a>
+                <a class="developer-edit" href="{{ path('developer_edit', {'id': developer.id}) }}">Modifier</a>
+                <br>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+
+    <a class="new" href="{{ path('developer_new') }}">Ajouter</a>
+{% endblock %}
